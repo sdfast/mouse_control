@@ -3,7 +3,7 @@ import win32api
 import time
 
 
-def listen_for_mouse_click():
+def move_mouse_until_click():
     left_click_state = win32api.GetKeyState(0x01)  # Left button down = 0 or 1. Button up = -127 or -128
     right_click_state = win32api.GetKeyState(0x02)  # Right button down = 0 or 1. Button up = -127 or -128
     clicked = False
@@ -34,4 +34,4 @@ def listen_for_mouse_click():
 
 
 if __name__ == '__main__':
-    listen_for_mouse_click()
+    move_mouse_until_click()
